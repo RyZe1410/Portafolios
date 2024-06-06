@@ -1,0 +1,279 @@
+@import url('https://fonts.googleapis.com/css?family=Fira+Mono:400');
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #14141f;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+}
+
+.menu {
+    display: flex;
+    margin: 20px;
+    justify-content: center center;
+    text-align: center;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.menu nav a {
+    padding-left: 20px;
+    text-decoration: none;
+    color: white;
+}
+
+.menu nav a:hover {
+    padding-left: 20px;
+    text-decoration: none;
+    color: aqua;
+}
+
+.menu nav img {
+    width: 40px;
+    height: 40px;
+}
+
+.cont {
+    justify-content: center center;
+    text-align: center;
+    display: inline-flex;
+    margin: 20px;
+}
+
+.bio {
+    display: flex;
+    margin: 10px;
+}
+
+.bio img {
+    border-radius: 400px;
+    width: 300px;
+    height: 300px;
+    margin-top: 20px;
+    margin-left: 180px;
+    border: solid 3px aqua;
+}
+
+.bio img:hover {
+    border: solid aqua transparent;
+    filter: contrast(3);
+    filter:saturate(3);
+}
+
+.bio p {
+    margin-left: 30px;
+    margin-top: 130px;
+    font-size: 19px;
+}
+
+.link {
+    text-decoration: none;
+    color: aqua;
+    font-size: 20px;
+}
+
+.tool {
+    border-radius: 10px;
+    padding: 50px;
+    margin: 20px;
+    background-color: #46466d;
+}
+
+.tool h2 {
+    color: aqua;
+    margin-bottom: 10px;
+}
+
+.tool p {
+    margin-bottom: 20px;
+}
+
+.bt {
+    font-size: 12PX;
+    border-radius: 10px;
+    color: white;
+    text-decoration: none;
+    padding: 5px;
+    background-color: aqua;
+    border: solid 1px black;
+}
+
+.bt:hover {
+    color: black;
+    background-color: aquamarine;
+}
+
+footer {
+    background-color: #46466d;
+    border-top-left-radius: 80px;
+    padding: 0px;
+    justify-content: center center;
+    text-align: center;
+}
+
+
+@media (min-width: 300px) and (max-width: 500px) {
+
+    .cont {
+        display: table;
+    }
+    .menu {
+        justify-content: center center;
+        text-align: center;
+    }
+
+    nav {
+        text-align: center center;
+        justify-content: center center;
+        justify-content: space-around;
+    }
+
+    .bio {
+    justify-content: center center;
+    text-align: center;
+    display: block;
+    align-items: center;
+    margin: 0%;
+    }
+
+    .bio img {
+        width: 200px;
+        height: 200px;
+        margin: 0%;
+        border-radius: 300px;
+    }
+
+    .bio p {
+        margin: 0%;
+        margin-top: 20px;
+    }
+
+    .tool {
+        margin: 10%;
+    }
+
+    footer {
+        background-color: #46466d;
+        border-top-left-radius: 20px;
+        padding: 2px;
+        justify-content: center center;
+        text-align: center;
+    }
+    
+}
+
+
+@media (min-width: 502px) and (max-width:820px) {
+
+    
+    .cont {
+        display: table;
+    }
+    .menu {
+        justify-content: center center;
+        text-align: center;
+    }
+
+    nav {
+        text-align: center center;
+        justify-content: center center;
+        justify-content: space-around;
+    }
+
+    .bio {
+    justify-content: center center;
+    text-align: center;
+    display: block;
+    align-items: center;
+    margin: 0%;
+    }
+
+    .bio img {
+        width: 200px;
+        height: 200px;
+        margin: 0%;
+        border-radius: 300px;
+    }
+
+    .bio p {
+        margin: 0%;
+        margin-top: 20px;
+    }
+
+    .tool {
+        margin: 10%;
+    }
+
+    footer {
+        background-color: #46466d;
+        border-top-left-radius: 20px;
+        padding: 2px;
+        justify-content: center center;
+        text-align: center;
+    }
+
+}
+
+.menu h1{
+    animation: glitch 1s linear infinite;
+    color: rgb(255, 255, 255)
+  }
+  
+  @keyframes glitch{
+    2%,64%{
+      transform: translate(2px,0) skew(0deg);
+    }
+    4%,60%{
+      transform: translate(-2px,0) skew(0deg);
+    }
+    62%{
+      transform: translate(0,0) skew(5deg); 
+    }
+  }
+  
+  h1:before,
+  h1:after{
+    content: attr(title);
+    position: absolute;
+    left: 0;
+  }
+  
+  h1:before{
+    animation: glitchTop 1s linear infinite;
+    clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+  }
+  
+  @keyframes glitchTop{
+    2%,64%{
+      transform: translate(2px,-2px);
+    }
+    4%,60%{
+      transform: translate(-2px,2px);
+    }
+    62%{
+      transform: translate(13px,-1px) skew(-13deg); 
+    }
+  }
+  
+  h1:after{
+    animation: glitchBotom 1.5s linear infinite;
+    clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+    -webkit-clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+  }
+  
+  @keyframes glitchBotom{
+    2%,64%{
+      transform: translate(-2px,0);
+    }
+    8%,60%{
+      transform: translate(-2px,0);
+    }
+    62%{
+      transform: translate(-22px,5px) skew(21deg); 
+    }
+  }
